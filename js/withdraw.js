@@ -5,6 +5,10 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawAmountValueString = withdrawAmount.value;
     const withdrawAmountValue = parseFloat(withdrawAmountValueString);
 
+    if(isNaN(withdrawAmountValue)){
+        alert("please enter a valid amount")
+        return;
+    }
     // step-7
     withdrawAmount.value = "";
 

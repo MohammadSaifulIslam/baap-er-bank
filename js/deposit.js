@@ -4,7 +4,10 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const depositAmount = document.getElementById('deposit-amount');
     const depositAmountValueString = depositAmount.value;
     const depositAmountValue = parseFloat(depositAmountValueString);
-    
+    if(isNaN(depositAmountValue)){
+        alert("please enter a valid amount")
+        return;
+    }
 
     // step-3 get the current deposit total
     const currentDeposit = document.getElementById('current-deposit');
